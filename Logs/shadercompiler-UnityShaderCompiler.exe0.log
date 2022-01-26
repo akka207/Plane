@@ -1,0 +1,4 @@
+Base path: 'C:/Alex/Unity/Editor/Data', plugins path 'C:/Alex/Unity/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+Cmd: shutdown
