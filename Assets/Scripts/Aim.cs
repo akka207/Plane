@@ -14,6 +14,8 @@ public class Aim : MonoBehaviour
     public static float BulletTrajectoryRotation;
     public static Vector3 BulletTrajectoryGreenAxis;
 
+    public GameObject shotButton;
+
     void Update()
     {
         BulletTrajectoryPos = canonPos;
@@ -21,6 +23,7 @@ public class Aim : MonoBehaviour
         float i = 0.01f;
         float newDistance = 0;
         float lastDistance = searchDistance(BulletTrajectoryPos, trajectoryKoefPos);
+        float previousDistance = searchDistance(BulletTrajectoryPos, trajectoryKoefPos);
         while(true)
         {
             trajectoryKoefPos = planePos;
@@ -40,6 +43,15 @@ public class Aim : MonoBehaviour
             }
             else
             {
+                if(previousDistance<newDistance)
+                {
+                    shotButton.SetActive(false);
+                }
+                else
+                {
+                    shotButton.SetActive(true);
+                }
+                previousDistance = searchDistance(BulletTrajectoryPos, trajectoryKoefPos);
                 break;
             }
         }

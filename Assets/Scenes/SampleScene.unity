@@ -4137,6 +4137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0998449763f54f54d928495dc36b7a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotButton: {fileID: 1390818034}
 --- !u!212 &4127481675303076870
 SpriteRenderer:
   m_ObjectHideFlags: 0
